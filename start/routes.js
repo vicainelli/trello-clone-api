@@ -17,3 +17,5 @@
 const Route = use('Route')
 
 Route.post('/sessions', 'SessionController.store')
+
+Route.resource('/boards', 'BoardController').apiOnly()

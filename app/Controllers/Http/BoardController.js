@@ -20,8 +20,9 @@ class BoardController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {
-
+  async index ({ request, response }) {
+    const boards = await Board.all()
+    return response.ok(boards)
   }
 
   /**

@@ -23,3 +23,10 @@ Factory.blueprint('App/Models/User', (faker, i, data = {}) => {
     ...data
   }
 })
+
+Factory.blueprint('App/Models/Board', faker => {
+  return {
+    title: faker.sentence(),
+    description: faker.sentence()
+  }
+})

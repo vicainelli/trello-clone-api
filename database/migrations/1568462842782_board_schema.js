@@ -6,7 +6,7 @@ const Schema = use('Schema')
 class BoardSchema extends Schema {
   up () {
     this.create('boards', (table) => {
-      table.text('title')
+      table.text('title').notNullable()
       table.text('description')
       table.integer('user_id').unsigned().references('id').inTable('users')
       table.increments()

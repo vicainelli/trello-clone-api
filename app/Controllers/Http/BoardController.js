@@ -67,6 +67,9 @@ class BoardController {
    * @param {View} ctx.view
    */
   async show ({ params, request, response, view }) {
+    const board = await Board.findOrFail(params.id)
+
+    return response.ok(board)
   }
 
   /**

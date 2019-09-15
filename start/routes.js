@@ -22,4 +22,5 @@ Route.post('/boards', 'BoardController.store')
   .validator('CreateBoard')
   .middleware(['auth'])
 
-Route.get('/boards', 'BoardController.index')
+  Route.get('/boards', 'BoardController.index')
+  Route.get('/boards/:id', 'BoardController.show')

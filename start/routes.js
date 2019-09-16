@@ -24,3 +24,5 @@ Route.post('/boards', 'BoardController.store')
 
   Route.get('/boards', 'BoardController.index')
   Route.get('/boards/:id', 'BoardController.show')
+
+  Route.get('/me/boards', 'MeController.boards').middleware(['auth'])

@@ -24,5 +24,8 @@ Route.post('/boards', 'BoardController.store')
 
   Route.get('/boards', 'BoardController.index')
   Route.get('/boards/:id', 'BoardController.show')
+  Route.put('/boards/:id', 'BoardController.update')
+  .validator('UpdateBoard')
+  .middleware(['auth'])
 
   Route.get('/me/boards', 'MeController.boards').middleware(['auth'])

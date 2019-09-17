@@ -2,6 +2,7 @@
 
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Board = use('App/Models/Board')
+const UnauthorizedException = use('App/Exceptions/UnauthorizedException')
 
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
@@ -92,7 +93,18 @@ class BoardController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {
+  async update({ response, request, params, auth }) {
+    const user = await auth.getUser()
+
+    const board = await Board.findOrFail(params.id)
+
+    if (board.user_id !== user.id) throw new UnauthorizedException();
+
+    board.merge(request.only(['title', 'description']));
+
+    await board.save();
+
+    return response.ok(board)
   }
 
   /**

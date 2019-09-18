@@ -1,28 +1,43 @@
-# Adonis API application
+# Trello Api Clone
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+This is a project to study NodeJS, AdonisJs, MongoDB and TDD
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+## To Do
 
-## Setup
+### User / Session
+- [ ] Validations
+- [ ] Delete/Destroy
 
-Use the adonis command to install the blueprint
+### Board
+- [ ] Validations
+- [ ] Delete/Destroy
 
-```bash
-adonis new yardstick --api-only
-```
+### Card
+- [ ] Create
+- [ ] Update
+- [ ] Show
+- [ ] Delete/Destroy
 
-or manually clone the repo and then run `npm install`.
+### Labels
+- [ ] Create
+- [ ] Update
+- [ ] Show
+- [ ] Delete/Destroy
 
+### Labels
+- [ ] Create
+- [ ] Update
+- [ ] Show
+- [ ] Delete/Destroy
 
-### Migrations
+### Comments
+- [ ] Create
+- [ ] Update
+- [ ] Show
+- [ ] Delete/Destroy
 
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+### Activity
+- [ ] Create
+- [ ] Update
+- [ ] Show
+- [ ] Delete/Destroy

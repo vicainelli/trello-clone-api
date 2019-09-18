@@ -18,14 +18,14 @@ const Route = use('Route')
 
 Route.post('/sessions', 'SessionController.store')
 
-Route.post('/boards', 'BoardController.store')
-  .validator('CreateBoard')
-  .middleware(['auth'])
-
-  Route.get('/boards', 'BoardController.index')
-  Route.get('/boards/:id', 'BoardController.show')
-  Route.put('/boards/:id', 'BoardController.update')
-  .validator('UpdateBoard')
-  .middleware(['auth'])
+Route.resource('boards', 'BoardController')
+  .apiOnly()
+  .validator(new Map([
+    [['boards.store'], ['CreateBoard']],
+    [['boards.update'], ['UpdateBoard']]
+  ]))
+  .middleware(new Map([
+    [['store', 'update'], ['auth']]
+  ]))
 
   Route.get('/me/boards', 'MeController.boards').middleware(['auth'])

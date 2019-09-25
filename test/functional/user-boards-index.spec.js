@@ -1,6 +1,6 @@
 
 const Factory = use('Factory')
-const { test, trait } = use('Test/Suite')('Get User boards')
+const { test, trait } = use('Test/Suite')('User Boards Index')
 
 trait('Test/ApiClient')
 trait('Auth/Client')

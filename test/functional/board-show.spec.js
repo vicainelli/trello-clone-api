@@ -2,7 +2,7 @@
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 const Factory = use('Factory')
-const { test, trait } = use('Test/Suite')('Get Board')
+const { test, trait } = use('Test/Suite')('Board Show')
 
 trait('Test/ApiClient')
 trait('Auth/Client')

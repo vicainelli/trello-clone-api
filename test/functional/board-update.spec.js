@@ -1,5 +1,5 @@
 const Factory = use('Factory')
-const { test, trait } = use('Test/Suite')('Update Board')
+const { test, trait } = use('Test/Suite')('Board Update')
 
 trait('Test/ApiClient')
 trait('Auth/Client')

@@ -28,4 +28,15 @@ Route.resource('boards', 'BoardController')
     [['store', 'update'], ['auth']]
   ]))
 
+
+Route.resource('cards', 'CardController')
+  .apiOnly()
+  // .validator(new Map([
+  //   [['boards.store'], ['CreateBoard']],
+  //   [['boards.update'], ['UpdateBoard']]
+  // ]))
+  .middleware(new Map([
+    [['store', 'update'], ['auth']]
+  ]))
+
   Route.get('/me/boards', 'MeController.boards').middleware(['auth'])

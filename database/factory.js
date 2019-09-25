@@ -30,3 +30,10 @@ Factory.blueprint('App/Models/Board', faker => {
     description: faker.sentence()
   }
 })
+
+Factory.blueprint('App/Models/Card', faker => {
+  return {
+    title: faker.sentence(),
+    description: faker.sentence()
+  }
+})

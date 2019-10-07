@@ -9,26 +9,36 @@ This is a project to study NodeJS, AdonisJs, MongoDB and TDD
 - [ ] Delete/Destroy
 
 ### Board
+- [x] Create
+- [x] Update
 - [ ] Validations
 - [ ] Delete/Destroy
+#### Relationship
+`User N:N Boards`
 
 ### Card
 - [ ] Create
 - [ ] Update
 - [ ] Show
 - [ ] Delete/Destroy
+#### Relationship
+`Board 1:N Cards`
 
 ### Labels
 - [ ] Create
 - [ ] Update
 - [ ] Show
 - [ ] Delete/Destroy
+#### Relationship
+`Card N:N Labels`
 
-### Labels
+### Files
 - [ ] Create
 - [ ] Update
 - [ ] Show
 - [ ] Delete/Destroy
+#### Relationship
+`Card 1:N Files`
 
 ### Comments
 - [ ] Create
@@ -36,8 +46,15 @@ This is a project to study NodeJS, AdonisJs, MongoDB and TDD
 - [ ] Show
 - [ ] Delete/Destroy
 
+#### Relationship
+`Card 1:N Comments`
+`User 1:N Comments`
+
 ### Activity
 - [ ] Create
 - [ ] Update
 - [ ] Show
 - [ ] Delete/Destroy
+#### Relationship
+`Card 1:N Activities`
+`User 1:N Activities`

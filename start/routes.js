@@ -18,6 +18,16 @@ const Route = use('Route')
 
 Route.post('/sessions', 'SessionController.store')
 
+Route.resource('users', 'UserController')
+  .apiOnly()
+  .validator(new Map([
+    [['users.store'], ['UserStore']],
+    // [['boards.update'], ['UpdateBoard']]
+  ]))
+  .middleware(new Map([
+    [['update'], ['auth']]
+  ]))
+
 Route.resource('boards', 'BoardController')
   .apiOnly()
   .validator(new Map([

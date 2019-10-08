@@ -5,9 +5,10 @@ This is a project to study NodeJS, AdonisJs, MongoDB and TDD
 ## To Do
 
 ### User / Session
-- [ ] Create
+- [x] Create
+  - [x] Tests
+  - [x] Validations
 - [ ] Update
-- [ ] Validations
 - [ ] Delete/Destroy
 
 ### Board

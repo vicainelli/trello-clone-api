@@ -5,6 +5,8 @@ This is a project to study NodeJS, AdonisJs, MongoDB and TDD
 ## To Do
 
 ### User / Session
+- [ ] Create
+- [ ] Update
 - [ ] Validations
 - [ ] Delete/Destroy
 

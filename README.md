@@ -13,8 +13,9 @@ This is a project to study NodeJS, AdonisJs, MongoDB and TDD
 
 ### Board
 - [x] Create
+  - [x] Tests
+  - [x] Validations
 - [x] Update
-- [ ] Validations
 - [ ] Delete/Destroy
 #### Relationship
 `User N:N Boards`
